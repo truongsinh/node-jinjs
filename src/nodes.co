@@ -112,11 +112,11 @@ class NodePrint extends Node
         returnString = "ref = " + expression + ";"
         returnString += "while ('function' === typeof ref) { ref = ref() };"
         if '()' is expression.substr -2
-            returnString += "if(ref !== null && ref !== undefined){ _res += ref.toString() }";
+            returnString += "if(ref !== null && ref !== undefined){ _res += ref.toString() }"
         else
-            returnString += "if(ref !== null && ref !== undefined){ if(ref.safe === true){_res += ref.toString() }";
-            returnString += "else { _res += ref.toString().replace(/\\&/g,'&amp;').replace(/\\</g,'&lt;').replace(/\\>/g,'&gt;'); }}";
-        return returnString;
+            returnString += "if(ref !== null && ref !== undefined){ if(ref.safe === true){_res += ref.toString() }"
+            returnString += "else { _res += ref.toString().replace(/\\&/g,'&amp;').replace(/\\</g,'&lt;').replace(/\\>/g,'&gt;'); }}"
+        return returnString
 
 class NodeTag extends Node
     @tag = \__tag__
