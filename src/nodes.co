@@ -115,7 +115,7 @@ class NodePrint extends Node
             returnString += "if(ref !== null && ref !== undefined){ _res += ref.toString() }"
         else
             returnString += "if(ref !== null && ref !== undefined){ if(ref.safe === true){_res += ref.toString() }"
-            returnString += "else { _res += ref.toString().replace(/\\&/g,'&amp;').replace(/\\</g,'&lt;').replace(/\\>/g,'&gt;').replace(/'/g,'&#39;').replace(/\"/g,'&#quot;'); }}"
+            returnString += "else { _res += ref.toString().replace(/\\&/g,'&amp;').replace(/\\</g,'&lt;').replace(/\\>/g,'&gt;').replace(/'/g,'&#39;').replace(/\"/g,'&\#quot;'); }}"
         return returnString
 
 class NodeTag extends Node
